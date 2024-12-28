@@ -1,0 +1,310 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #cabda1, #C9A77E);
+    color: #333;
+}
+
+/* Шапка */
+header {
+    background: url('https://i.pinimg.com/736x/a4/ea/87/a4ea8737b7889c7b870fe03c206272ee.jpg') center/cover ;
+    background-position: center;
+    position: relative; /* Позиционирование относительно родительского блока */
+    color: #faebd7;
+    padding: 25px 0;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #fdf5e6;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: azure;
+}
+.nav .active a {
+    font-weight: bold;
+    border-bottom: 3px solid #faebd7;
+}
+
+/* Основной контент */
+main {
+    padding: 40px 10%;
+}
+
+.container {
+    width: 70%; 
+    height: auto;
+    display: flex; /* Используем flex-контейнер */
+    flex-direction: column; /* Элементы располагаются в столбец */
+    gap: 20px; /* Отступы между элементами */
+    max-width: 1000px; /* Ограничиваем ширину для удобства чтения */
+    margin: 0 auto; /* Центрируем контейнер */
+}
+/* Секция */
+.section {
+    margin-bottom: 60px;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    color: azure;
+
+    text-align: center;
+    margin-bottom: 30px ;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.section p {
+    font-size: 1rem;
+    color: azure;
+    margin: 0 15px 20px;
+    line-height: 1.6;
+}
+
+/* Карточки книг */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Сетка с авто-адаптацией и минимальной шириной колонок 200px */
+    gap: 25px;
+    justify-items: center;
+    padding: 50 20px;
+}
+
+.card {
+    background: linear-gradient(135deg, #ffffff, #f8f9fc);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eaeaea;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 255px;
+    height: 255px;
+    object-fit: cover;
+    border-bottom: 2px solid #eaeaea;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 10px 0 10px;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #5b3b70;
+    margin: 0 15px 20px;
+    line-height: 1.6;
+}
+.card a {
+    font-size: 1rem;
+    color: #000000;
+    margin: 0 15px 20px;
+    line-height: 1.6;
+}
+
+.card button {
+    background: linear-gradient(135deg, #947646, #835613);
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(126, 102, 40, 0.3);
+}
+
+.card button:hover {
+    background: linear-gradient(135deg, #7d5e29, #4e3809);
+    box-shadow: 0 6px 15px rgba(53, 122, 183, 0.4);
+}
+.social-links {
+    margin-top: 20px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    font-size: 2rem;
+    color: #885d00;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #643d00;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    .card h3 {
+        font-size: 1.4rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+
+    .card button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* О проекте */
+.about {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    text-align: left;
+}
+
+.about img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    color: #666;
+}
+.book-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.book-details img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.book-details p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Контакты */
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+.back-button {
+    margin-top: 15px; /* Отступ сверху у кнопки */
+    text-align: center; /* Выравнивание кнопки по центру */
+}
+
+.back-button button {
+    background:#885d00; /* Градиент для фона кнопки */
+    color: white; /* Цвет текста на кнопке */
+    border: none; /* Убирает рамку у кнопки */
+    padding: 15px 30px; /* Отступы внутри кнопки */
+    font-size: 16px; /* Размер шрифта на кнопке */
+    border-radius: 15px; /* Округлые углы у кнопки */
+    cursor: pointer; /* Изменяет курсор на указатель при наведении */
+    transition: box-shadow 0.3s ease; /* Плавный переход для тени кнопки */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Тень вокруг кнопки */
+}
+
+.back-button button:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Увеличивает тень при наведении */
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #deb887;
+    color: #fff;
+    font-size: 1rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(center, minmax(200px, 1fr)); /* Сетка с авто-адаптацией и минимальной шириной колонок 200px */    
+    }
+    .card h3 {
+        font-size: 1.2rem;
+    }
+    
+}
